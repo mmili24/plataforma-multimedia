@@ -7,7 +7,7 @@ class Multimedia {
     }
 
     play() {
-        console.log("Reproduint...")
+        console.log(`Reproduint ${this.titol}`)
         this.#views += 1
     }
 
@@ -18,5 +18,33 @@ class Multimedia {
     #calcularCostServer() {
         return this.durada * 0.01
 
+    }
+}
+
+class Pelicula extends Multimedia {
+     constructor(titol, durada, any, preuFix) {
+        super(titol, durada)
+        this.any = any
+        this.preuFix = preuFix
+    }
+
+    calcularRoyalties() {
+        return this.getViews() * this.preuFix
+    }
+}
+
+class Serie extends Multimedia {
+    constructor(titol, durada, numCapitols) {
+        super(titol, durada)
+        this.numCapitols = numCapitols
+    }
+
+    play() {
+        super.play()
+        console.log (`Marató de ${this.titol} iniciada.`)
+    }
+
+    calcularRoyalties() {
+        return this.getViews() * this.numCapitols * 0.05
     }
 }
