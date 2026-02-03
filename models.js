@@ -49,7 +49,7 @@ class Serie extends Multimedia {
     }
 }
 
-class User {
+class Usuari {
     constructor(myList = []) {
         this.myList = myList
     }
