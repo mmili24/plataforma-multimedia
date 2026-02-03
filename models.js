@@ -7,6 +7,16 @@ class Multimedia {
     }
 
     play(video) {
-        
+        console.log("Reproduint...")
+        this.#views += 1
+    }
+
+    getViews() {
+        return this.#views
+    }
+
+    #calcularCostServer() {
+        return this.durada * 0.01
+
     }
 }
