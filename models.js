@@ -6,7 +6,7 @@ class Multimedia {
         this.durada = durada;
     }
 
-    play(video) {
+    play() {
         console.log("Reproduint...")
         this.#views += 1
     }
