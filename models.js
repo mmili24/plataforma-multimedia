@@ -48,3 +48,21 @@ class Serie extends Multimedia {
         return this.getViews() * this.numCapitols * 0.05
     }
 }
+
+class User {
+    constructor(myList = []) {
+        this.myList = myList
+    }
+
+    afegirALlista(item) {
+        this.myList.push (item)
+    }
+
+    tempsTotalConsumit() {
+        let total = 0
+        for (const item of this.myList) {
+            total += item.durada
+        }
+        return total / 60
+    }
+}
