@@ -27,7 +27,7 @@ describe("📺 StreamFlix Core Tests", () => {
         const friends = new Serie("Friends", 30, 10);
 
         expect(friends.durada).toBe(300);
-        expect(friends.play());
+        expect(friends.play()).toBe("Marató");
 
         expect(friends.calcularRoyalties()).toBe(0.5);
     });

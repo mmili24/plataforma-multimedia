@@ -37,12 +37,12 @@ export class Serie extends Multimedia {
     constructor(titol, durada, numCapitols) {
         super(titol, durada);
         this.numCapitols = numCapitols;
-        this.durada = durada * numCapitols
+        this.durada = durada * numCapitols;
     }
 
     play() {
         super.play();
-        console.log (`Marató de ${this.titol} iniciada.`)
+        return "Marató";
     }
 
     calcularRoyalties() {
@@ -64,6 +64,6 @@ export class Usuari {
         for (const item of this.myList) {
             total += item.durada;
         }
-        return total / 60;
+        return (Number((total / 60).toFixed(2)));
     }
 }
