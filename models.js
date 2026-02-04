@@ -37,6 +37,7 @@ export class Serie extends Multimedia {
     constructor(titol, durada, numCapitols) {
         super(titol, durada);
         this.numCapitols = numCapitols;
+        this.durada = durada * numCapitols
     }
 
     play() {

@@ -26,7 +26,7 @@ describe("📺 StreamFlix Core Tests", () => {
     test("Serie: Polimorfisme i Royalties complexos", () => {
         const friends = new Serie("Friends", 30, 10);
 
-        expect(friends.durada).toBe(30);
+        expect(friends.durada).toBe(300);
         expect(friends.play());
 
         expect(friends.calcularRoyalties()).toBe(0.5);
