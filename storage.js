@@ -4,13 +4,16 @@ export class StreamService {
   }
 
   guardarCataleg(llistaMultimedia) {
-    const dades = JSON.stringify(llistaMultimedia);
-    localStorage.setItem(this.KEY, dades);
+    const pelisSeries = JSON.stringify(llistaMultimedia);
+    localStorage.setItem(this.KEY, pelisSeries);
     }
 
   carregarCataleg() {
-    const dades = localStorage.getItem(this.KEY);
-    //????????
+    const pelisSeries = localStorage.getItem(this.KEY);
+    if (pelisSeries === null) {
+      return [];
+    }
+    return JSON.parse(pelisSeries);
   }
 
   esborrarTot() {
