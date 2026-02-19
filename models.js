@@ -31,6 +31,10 @@ export class Pelicula extends Multimedia {
     calcularRoyalties() {
         return this.getViews() * this.preuFix;
     }
+
+    static fromJSON(json) {
+        return new Pelicula(json.titol, json.durada, json.any, json.preuFix);
+    }
 }
 
 export class Serie extends Multimedia {
@@ -47,6 +51,10 @@ export class Serie extends Multimedia {
 
     calcularRoyalties() {
         return this.getViews() * this.numCapitols * 0.05;
+    }
+
+    static fromJSON(json) {
+        return new Serie(json.titol, json.durada, json.numCapitols, json.durada);
     }
 }
 
